@@ -14,10 +14,18 @@ class SizeConfig {
   static MediaQueryData? mediaQuery;
   static double? height;
   static double? width;
+  static double? blockSizeHorizontal;
+  static double? blockSizeVertical;
 
   static init(BuildContext context) {
     mediaQuery = MediaQuery.of(context);
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
+    blockSizeHorizontal = height! / 100;
+    blockSizeVertical = width! / 100;
+  }
+
+  static double getAdaptiveFontSize(double fontSize) {
+    return fontSize * (width! / 1920);
   }
 }

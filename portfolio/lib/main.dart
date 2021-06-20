@@ -50,6 +50,19 @@ class App extends StatelessWidget {
           color: kAccentColor,
           size: kDefaultIconSize,
         ),
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            textStyle: MaterialStateProperty.all(
+              GoogleFonts.poppins(
+                fontSize: 32,
+                color: kTextColorSecondary,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            foregroundColor: MaterialStateProperty.all(kTextColorSecondary),
+          ),
+        ),
       ),
       home: Home(),
     );
