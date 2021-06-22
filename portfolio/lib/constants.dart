@@ -10,6 +10,9 @@ const Color kTextColorSecondary = Color(0xFF69F0AE);
 const double kDefaultPadding = 16.0;
 const double kDefaultIconSize = 32.0;
 
+const String kDummyText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis. A diam sollicitudin tempor id eu nisl nunc. Interdum varius sit amet mattis vulputate enim nulla. Quisque sagittis purus sit amet volutpat.';
+
 class SizeConfig {
   static MediaQueryData? mediaQuery;
   static double? height;
@@ -26,6 +29,8 @@ class SizeConfig {
   }
 
   static double getAdaptiveFontSize(double fontSize) {
+    ///
+    /// the design is made on a width of 1920
     return fontSize * (width! / 1920);
   }
 }

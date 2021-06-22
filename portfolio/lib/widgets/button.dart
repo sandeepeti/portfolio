@@ -75,7 +75,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
                 child: Text(
                   widget.label,
                   style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                        fontSize: SizeConfig.getAdaptiveFontSize(44),
+                        fontSize: SizeConfig.getAdaptiveFontSize(32),
                         color: foregroundColorAnimation.value,
                       ),
                 ),
@@ -161,7 +161,7 @@ class _IconButtonState extends State<IButton> with TickerProviderStateMixin {
                 child: FaIcon(
                   widget.icon,
                   color: foregroundColorAnimation.value,
-                  size: SizeConfig.getAdaptiveFontSize(58),
+                  size: SizeConfig.getAdaptiveFontSize(44),
                 ),
               ),
             ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/constants.dart';
 
-import 'sections/header_section.dart';
+import 'sections/sections.dart';
 
 void main() => runApp(App());
 
@@ -20,27 +20,32 @@ class App extends StatelessWidget {
         shadowColor: kShadowColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
-          headline1: GoogleFonts.playfairDisplay(
-            fontSize: 72,
+          headline1: GoogleFonts.pollerOne(
+            fontSize: 48,
             fontWeight: FontWeight.bold,
             color: kTextColorPrimary,
           ),
-          subtitle1: GoogleFonts.poppins(
+          headline2: GoogleFonts.pollerOne(
+            fontSize: 48,
+            fontWeight: FontWeight.bold,
+            color: kTextColorSecondary,
+          ),
+          subtitle1: GoogleFonts.pollerOne(
             fontSize: 28,
             color: kTextColorPrimary,
             fontWeight: FontWeight.w400,
           ),
-          subtitle2: GoogleFonts.poppins(
+          subtitle2: GoogleFonts.pollerOne(
             fontSize: 28,
             color: kTextColorSecondary,
             fontWeight: FontWeight.w400,
           ),
-          bodyText1: GoogleFonts.poppins(
+          bodyText1: GoogleFonts.comfortaa(
             fontSize: 24,
             color: kTextColorPrimary,
             fontWeight: FontWeight.w300,
           ),
-          bodyText2: GoogleFonts.poppins(
+          bodyText2: GoogleFonts.comfortaa(
             fontSize: 24,
             color: kTextColorSecondary,
             fontWeight: FontWeight.w300,
@@ -78,7 +83,7 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(kDefaultPadding),
+        // padding: EdgeInsets.all(kDefaultPadding),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -88,10 +93,11 @@ class Home extends StatelessWidget {
 
             ///
             /// All the sections in the portfolio
-            /// `Header` `About` `Services` `Projects` `Contact`
+            /// `Header` `About` `Projects` `Contact`
             /// will be added as children to this column.
             children: [
               HeaderSection(),
+              AboutSection(),
             ],
           ),
         ),
